@@ -189,7 +189,9 @@ class Widget extends HTMLElement {
       // let apiresult = await "https://api.sampleapis.com/coffee/hot";
       // let dataressult = await apiresult.json();
       // console.log(dataressult);
-      let result = await fetch("json/data.json");
+      let result = await fetch(
+        "https://cdn.jsdelivr.net/gh/hiraolive/widget/json/data.json"
+      );
       let data = await result.json();
       console.log(data);
       this.data = { ...this.data, ...data };
